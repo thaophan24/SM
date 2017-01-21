@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.ServiceModel.Channels;
 using System.ServiceModel.Description;
@@ -19,17 +20,18 @@ namespace SMSecurity.WebService
 
         public void ApplyClientBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, ClientRuntime clientRuntime)
         {
-            throw new NotImplementedException();
+            Debugger.Launch();
+            clientRuntime.ClientMessageInspectors.Add(new ClientMessageInspector());
         }
 
         public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, DispatchRuntime dispatchRuntime)
         {
-            throw new NotImplementedException();
+            dispatchRuntime.MessageInspectors.Add(new ServerMessageInspector());
         }
 
         public void Validate(ContractDescription contractDescription, ServiceEndpoint endpoint)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

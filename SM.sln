@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SM.Web", "SM.Web\SM.Web.csproj", "{70B57800-D7F0-4FF3-B365-3292EA92BBC5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{59F72984-59D8-48B6-9E22-1EAED26C935E} = {59F72984-59D8-48B6-9E22-1EAED26C935E}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessing", "DataAccessing\DataAccessing.csproj", "{DAEC27BD-C1DA-4481-A8FB-6548ACED2381}"
 EndProject
