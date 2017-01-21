@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SM.Web", "SM.Web\SM.Web.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessing", "DataAccessing\DataAccessing.csproj", "{DAEC27BD-C1DA-4481-A8FB-6548ACED2381}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMWcfService", "SMWcfService\SMWcfService.csproj", "{59F72984-59D8-48B6-9E22-1EAED26C935E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMSecurity", "SMSecurity\SMSecurity.csproj", "{6809C2B6-3985-43D4-8584-A1FCBE190958}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{DAEC27BD-C1DA-4481-A8FB-6548ACED2381}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAEC27BD-C1DA-4481-A8FB-6548ACED2381}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAEC27BD-C1DA-4481-A8FB-6548ACED2381}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59F72984-59D8-48B6-9E22-1EAED26C935E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59F72984-59D8-48B6-9E22-1EAED26C935E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59F72984-59D8-48B6-9E22-1EAED26C935E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59F72984-59D8-48B6-9E22-1EAED26C935E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6809C2B6-3985-43D4-8584-A1FCBE190958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6809C2B6-3985-43D4-8584-A1FCBE190958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6809C2B6-3985-43D4-8584-A1FCBE190958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6809C2B6-3985-43D4-8584-A1FCBE190958}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
