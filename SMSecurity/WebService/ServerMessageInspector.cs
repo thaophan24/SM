@@ -16,7 +16,11 @@ namespace SMSecurity.WebService
             int found = request.Headers.FindHeader("smheader", "ns");
             if (found != -1)
             {
-                string header = request.Headers.GetHeader<string>("smheader", "ns");
+                AuthTokenHeader authToken = request.Headers.GetHeader<AuthTokenHeader>("smheader", "ns");
+                if (authToken == null || authToken.UserName == null || authToken.HashPassword == null)
+                {
+                    throw new FaultException("You might not have permission to access this operation.");
+                }
             }
             return null;
         }

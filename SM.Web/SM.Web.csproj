@@ -250,6 +250,12 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\Service\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SMSecurity\SMSecurity.csproj">
+      <Project>{6809c2b6-3985-43d4-8584-a1fcbe190958}</Project>
+      <Name>SMSecurity</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

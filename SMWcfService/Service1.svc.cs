@@ -15,7 +15,6 @@ namespace SMWcfService
     {
         public Service1()
         {
-            Debugger.Launch();
         }
         public string GetData()
         {

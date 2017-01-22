@@ -11,6 +11,16 @@ namespace SMSecurity.WebService
 {
     public class ClientMessageInspector : IClientMessageInspector
     {
+        private AuthTokenHeader AuthToken;
+        public ClientMessageInspector() : this(null)
+        {
+
+        }
+        public ClientMessageInspector(AuthTokenHeader authToken)
+        {
+            this.AuthToken = authToken;
+        }
+
         public void AfterReceiveReply(ref Message reply, object correlationState)
         {
             
@@ -18,7 +28,7 @@ namespace SMSecurity.WebService
 
         public object BeforeSendRequest(ref Message request, IClientChannel channel)
         {
-            MessageHeader header = MessageHeader.CreateHeader("smheader", "ns", "smvalue");
+            MessageHeader header = MessageHeader.CreateHeader("smheader", "ns", AuthToken);
             request.Headers.Add(header);
             return null;
         }

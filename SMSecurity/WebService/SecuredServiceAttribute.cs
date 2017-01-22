@@ -20,8 +20,7 @@ namespace SMSecurity.WebService
 
         public void ApplyClientBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, ClientRuntime clientRuntime)
         {
-            Debugger.Launch();
-            clientRuntime.ClientMessageInspectors.Add(new ClientMessageInspector());
+            clientRuntime.MessageInspectors.Add(new ClientMessageInspector());
         }
 
         public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, DispatchRuntime dispatchRuntime)

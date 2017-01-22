@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
@@ -43,6 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebService\AuthTokenHeader.cs" />
+    <Compile Include="WebService\ClientBehaviorExtensionElement.cs" />
+    <Compile Include="WebService\ClientBehavior.cs" />
     <Compile Include="WebService\ClientMessageInspector.cs" />
     <Compile Include="WebService\SecuredServiceAttribute.cs" />
     <Compile Include="WebService\ServerMessageInspector.cs" />
