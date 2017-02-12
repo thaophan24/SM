@@ -7,7 +7,7 @@ using System.ServiceModel.Dispatcher;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SMSecurity.WebService
+namespace SM.Security.WebService
 {
     public class ServerMessageInspector : IDispatchMessageInspector
     {

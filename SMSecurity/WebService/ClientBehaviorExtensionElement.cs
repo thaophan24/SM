@@ -5,7 +5,7 @@ using System.ServiceModel.Configuration;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SMSecurity.WebService
+namespace SM.Security.WebService
 {
     public class ClientBehaviorExtensionElement : BehaviorExtensionElement
     {

@@ -251,9 +251,17 @@
     <WCFMetadataStorage Include="Service References\Service\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SMSecurity\SMSecurity.csproj">
+    <ProjectReference Include="..\SM.Business\SM.Business.csproj">
+      <Project>{9733da05-6cfa-48d3-9595-0deb75b90626}</Project>
+      <Name>SM.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SM.Model\SM.Model.csproj">
+      <Project>{fbd7f07e-a205-4054-beb5-0b89df2da223}</Project>
+      <Name>SM.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SMSecurity\SM.Security.csproj">
       <Project>{6809c2b6-3985-43d4-8584-a1fcbe190958}</Project>
-      <Name>SMSecurity</Name>
+      <Name>SM.Security</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

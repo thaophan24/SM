@@ -1,4 +1,4 @@
-﻿using SMSecurity.WebService;
+﻿using SM.Security.WebService;
 using System;
 using System.Collections.Generic;
 using System.Linq;

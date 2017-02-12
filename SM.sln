@@ -8,11 +8,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SM.Web", "SM.Web\SM.Web.csp
 		{59F72984-59D8-48B6-9E22-1EAED26C935E} = {59F72984-59D8-48B6-9E22-1EAED26C935E}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessing", "DataAccessing\DataAccessing.csproj", "{DAEC27BD-C1DA-4481-A8FB-6548ACED2381}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SM.DataAccessing", "DataAccessing\SM.DataAccessing.csproj", "{DAEC27BD-C1DA-4481-A8FB-6548ACED2381}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMWcfService", "SMWcfService\SMWcfService.csproj", "{59F72984-59D8-48B6-9E22-1EAED26C935E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SM.WcfService", "SMWcfService\SM.WcfService.csproj", "{59F72984-59D8-48B6-9E22-1EAED26C935E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMSecurity", "SMSecurity\SMSecurity.csproj", "{6809C2B6-3985-43D4-8584-A1FCBE190958}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SM.Security", "SMSecurity\SM.Security.csproj", "{6809C2B6-3985-43D4-8584-A1FCBE190958}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SM.Model", "SM.Model\SM.Model.csproj", "{FBD7F07E-A205-4054-BEB5-0B89DF2DA223}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SM.Business", "SM.Business\SM.Business.csproj", "{9733DA05-6CFA-48D3-9595-0DEB75B90626}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +40,14 @@ Global
 		{6809C2B6-3985-43D4-8584-A1FCBE190958}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6809C2B6-3985-43D4-8584-A1FCBE190958}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6809C2B6-3985-43D4-8584-A1FCBE190958}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBD7F07E-A205-4054-BEB5-0B89DF2DA223}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBD7F07E-A205-4054-BEB5-0B89DF2DA223}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBD7F07E-A205-4054-BEB5-0B89DF2DA223}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBD7F07E-A205-4054-BEB5-0B89DF2DA223}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9733DA05-6CFA-48D3-9595-0DEB75B90626}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9733DA05-6CFA-48D3-9595-0DEB75B90626}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9733DA05-6CFA-48D3-9595-0DEB75B90626}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9733DA05-6CFA-48D3-9595-0DEB75B90626}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

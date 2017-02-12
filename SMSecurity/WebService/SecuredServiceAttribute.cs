@@ -8,7 +8,7 @@ using System.ServiceModel.Dispatcher;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SMSecurity.WebService
+namespace SM.Security.WebService
 {
     [AttributeUsage(AttributeTargets.Interface, Inherited = true)]
     public class SecuredServiceAttribute : Attribute, IContractBehavior

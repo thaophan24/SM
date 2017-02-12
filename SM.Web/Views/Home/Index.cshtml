@@ -1,5 +1,13 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-@model SM.Web.Controllers.Model
-<p>@Model.Value</p>
+@model SM.Model.Model1
+<div>
+    @using (Html.BeginForm("Index", "Home", new { @id = "SMForm" }, FormMethod.Post))
+    {
+        @Html.TextBoxFor(x => x.Id)
+        @Html.TextBoxFor(x => x.Name)
+        <input type="submit" value="Submit" />
+    }
+    <div>@Html.ValidationMessageFor(x => x.Id)</div>
+</div>

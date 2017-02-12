@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SMSecurity.WebService
+namespace SM.Security.WebService
 {
     public class AuthTokenHeader
     {
