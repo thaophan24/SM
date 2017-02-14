@@ -41,13 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColumnType.cs" />
+    <Compile Include="DataAnnotation\IdentityAttribute.cs" />
+    <Compile Include="DataAnnotation\MapColumnAttribute.cs" />
+    <Compile Include="DataAnnotation\MapTableAttribute.cs" />
     <Compile Include="Model1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SM.Business\SM.Business.csproj">
-      <Project>{9733da05-6cfa-48d3-9595-0deb75b90626}</Project>
-      <Name>SM.Business</Name>
+    <ProjectReference Include="..\SM.Business.Validation\SM.Business.Validation.csproj">
+      <Project>{23ada52f-01c7-4890-9b97-df5a472e5f90}</Project>
+      <Name>SM.Business.Validation</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

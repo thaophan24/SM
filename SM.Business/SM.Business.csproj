@@ -41,11 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ValidationAttributes\Attribute1Attribute.cs" />
-    <Compile Include="ValidationAttributes\Attribute2Attribute.cs" />
-    <Compile Include="ValidationAttributes\DynamicRequiredIf.cs" />
+    <Compile Include="Helper\EntityConverter.cs" />
+    <Compile Include="Helper\ModelHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ValidationAttributes\ValidationBaseAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SM.Model\SM.Model.csproj">
+      <Project>{fbd7f07e-a205-4054-beb5-0b89df2da223}</Project>
+      <Name>SM.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SM.Repository\SM.Repository.csproj">
+      <Project>{4006b970-3f8b-473f-8e7e-5045f20243a2}</Project>
+      <Name>SM.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,4 +1,4 @@
-﻿using SM.Security.WebService;
+﻿using SM.Security.Wcf;
 using System;
 using System.Collections.Generic;
 using System.Linq;

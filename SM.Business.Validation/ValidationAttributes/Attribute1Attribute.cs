@@ -5,13 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SM.Business.ValidationAttributes
+namespace SM.Business.Validation.Attributes
 {
-    public class DynamicRequiredIfAttribute : ValidationBaseAttribute
+   
+    public class Attribute1Attribute : ValidationBaseAttribute
     {
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
-            return new ValidationResult("error from dynamic");
+            return new ValidationResult("err from attribute 1");
         }
     }
 }

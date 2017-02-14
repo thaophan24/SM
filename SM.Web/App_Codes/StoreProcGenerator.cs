@@ -1,4 +1,7 @@
-public class StoreProcGenerator : DataProviderBase
+using System.IO;
+using System.Web;
+
+public class StoreProcGenerator
 {
 	private static string InsertTemplate
 	{

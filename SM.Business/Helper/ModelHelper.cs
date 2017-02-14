@@ -1,9 +1,11 @@
+using System.Linq;
+
 public static class ModelHelper
 {
-	public static string GetRepresentTable(this object model)
+	public static string GetRepresentTable<T>()
 	{
 		string res = string.Empty;
-		var atts = model.GetType().GetCustomAttributes(typeof(MapTableAttribute), false);
+		var atts = typeof(T).GetType().GetCustomAttributes(typeof(MapTableAttribute), false);
 		if (atts != null && atts.Any())
 		{
 			var tblAttr = atts.First() as MapTableAttribute;

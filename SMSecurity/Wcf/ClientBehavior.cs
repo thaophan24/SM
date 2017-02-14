@@ -7,7 +7,7 @@ using System.ServiceModel.Dispatcher;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SM.Security.WebService
+namespace SM.Security.Wcf
 {
     public class ClientBehavior : IEndpointBehavior
     {

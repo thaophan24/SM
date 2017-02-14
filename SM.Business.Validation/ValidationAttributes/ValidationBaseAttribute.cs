@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SM.Business.ValidationAttributes
+namespace SM.Business.Validation.Attributes
 {
     public class ValidationBaseAttribute : ValidationAttribute
     {

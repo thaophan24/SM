@@ -1,9 +1,14 @@
+using System;
+using System.Collections.Generic;
+using System.Security.Cryptography;
+using System.Text;
+
 public class RSACryptophy
 {
 	private int EncryptBlockSize;
 	private int DecryptBlockSize;
 	private int KeySize;
-	private int Key;
+	private string Key;
 	public RSACryptophy(string key) : this(key, 2048)
 	{}
 	public RSACryptophy(string key, int keySize)
@@ -45,7 +50,7 @@ public class RSACryptophy
 			int copyLength = (encryptedBytes.Length - (i * DecryptBlockSize)) / DecryptBlockSize;
 			copyLength = copyLength > 0 ? DecryptBlockSize : (encryptedBytes.Length % DecryptBlockSize);
 			byte[] encBlock = new byte[DecryptBlockSize];
-			Array.Copy(encryptedBytes, i * DecryptBlockSize, plainBlock, 0, copyLength);
+			Array.Copy(encryptedBytes, i * DecryptBlockSize, encBlock, 0, copyLength);
 			byte[] decBytes = RSA.Decrypt(encBlock, true);
 			plainBytes.AddRange(decBytes);
 		}

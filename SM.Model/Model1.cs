@@ -1,4 +1,4 @@
-﻿using SM.Business.ValidationAttributes;
+﻿using SM.Business.Validation.Attributes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
