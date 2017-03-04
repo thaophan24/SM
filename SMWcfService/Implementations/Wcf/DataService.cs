@@ -6,7 +6,7 @@ using System.Web;
 
 namespace SM.WcfService.Implementations
 {
-    public class DataService
+    public class DataService : IDataService
     {
         public DataTable GetTableColumnsType(string tableName)
         {

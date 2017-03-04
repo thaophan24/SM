@@ -35,6 +35,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,8 +50,13 @@
     <Compile Include="Wcf\ClientBehaviorExtensionElement.cs" />
     <Compile Include="Wcf\ClientBehavior.cs" />
     <Compile Include="Wcf\ClientMessageInspector.cs" />
+    <Compile Include="Wcf\Constants.cs" />
+    <Compile Include="Wcf\SecHelpers.cs" />
     <Compile Include="Wcf\SecuredServiceAttribute.cs" />
     <Compile Include="Wcf\ServerMessageInspector.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Key\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using SM.Security.Crypto;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
@@ -13,13 +15,16 @@ namespace SM.Security.Wcf
     {
         public object AfterReceiveRequest(ref Message request, IClientChannel channel, InstanceContext instanceContext)
         {
-            int found = request.Headers.FindHeader("smheader", "ns");
+            int found = request.Headers.FindHeader(Constants.SEC_HEADER, Constants.SEC_NS);
             if (found != -1)
             {
-                AuthTokenHeader authToken = request.Headers.GetHeader<AuthTokenHeader>("smheader", "ns");
-                if (authToken == null || authToken.UserName == null || authToken.HashPassword == null)
+                AuthTokenHeader authToken = request.Headers.GetHeader<AuthTokenHeader>(Constants.SEC_HEADER, Constants.SEC_NS);
+                if (authToken != null && authToken.UserName != null && authToken.HashPassword != null)
                 {
-                    throw new FaultException("You might not have permission to access this operation.");
+                    if (!SecHelpers.IsAuthenticated(authToken.UserName, authToken.HashPassword))
+                    {
+                        throw new UnauthorizedAccessException("SM: You might not have permission to access this funtion.");
+                    }
                 }
             }
             return null;

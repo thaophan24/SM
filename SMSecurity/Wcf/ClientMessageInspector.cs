@@ -28,7 +28,7 @@ namespace SM.Security.Wcf
 
         public object BeforeSendRequest(ref Message request, IClientChannel channel)
         {
-            MessageHeader header = MessageHeader.CreateHeader("smheader", "ns", AuthToken);
+            MessageHeader header = MessageHeader.CreateHeader(Constants.SEC_HEADER, Constants.SEC_NS, AuthToken);
             request.Headers.Add(header);
             return null;
         }
