@@ -10,10 +10,9 @@ namespace SM.Model
 {
     public class Model1
     {
-        [DynamicRequiredIf(Order = 2)]
         [Attribute1(Order = 1)]
-        [Required]
-        [Attribute2(Order =4)]
+        [Attribute2(Order = 4)]
+        [DynamicRequiredIf(Order = 2)]
         public int Id { get; set; }
         public string Name { get; set; }
     }

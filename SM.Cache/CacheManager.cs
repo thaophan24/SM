@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.Caching;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,36 +29,39 @@ namespace SM.Cache
         public void SetCacheDbTable(Type objectType, string tableName)
         {
             var typeName = objectType.FullName + CACHE_DB_SUFFIX;
-            var value = Cache.Get(typeName);
-            if (value == null)
-            {
-                value = tableName;
-                Cache.Set(typeName, value, null);
-            }
+            SetCacheValue(typeName, tableName);
         }
         public void SetCacheProperties(Type objectType)
         {
             var typeName = objectType.FullName + CACHE_PROP_SUFFIX;
-            var value = Cache.Get(typeName);
-            if (value == null)
-            {
-                value = objectType.GetProperties();
-                Cache.Set(typeName, value, null);
-            }
+            SetCacheValue(typeName, objectType.GetProperties());
         }
         public string GetCachedDbTable(Type objectType)
         {
             return GetCachedValue<string>(objectType.FullName + CACHE_DB_SUFFIX);
         }
-        public string GetCachedProperties(Type objectType)
+        public PropertyInfo[] GetCachedProperties(Type objectType)
         {
-            return GetCachedValue<string>(objectType.FullName + CACHE_PROP_SUFFIX);
+            var props = GetCachedValue<PropertyInfo[]>(objectType.FullName + CACHE_PROP_SUFFIX);
+            if (props == null)
+            {
+                SetCacheProperties(objectType);
+            }
+            return props;
         }
 
         public T GetCachedValue<T>(string key)
         {
             var value = Cache.Get(key);
             return value == null ? default(T) : (T)value;
+        }
+        public void SetCacheValue(string key, object value)
+        {
+            var v = Cache.Get(key);
+            if (v == null)
+            {
+                Cache.Set(key, value, null);
+            }
         }
     }
 }

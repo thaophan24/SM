@@ -13,7 +13,7 @@ namespace SM.DataAccessing
     {
         public SMDatabase(string connString) : base(connString)
         {
-        } 
+        }
         public DataTable ExecuteDataTable(string procName, SMParameterCollection parameters)
         {
             DbCommand cmd = this.GetStoredProcCommand(procName);

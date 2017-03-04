@@ -1,16 +1,17 @@
+using SM.Cache;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Reflection;
 
-namespace SM.Business
+namespace SM.Model.Helpers
 {
     public static class EntityConverter
     {
         public static T To<T>(this DataRow row) where T : class, new()
         {
             Type t = typeof(T);
-            PropertyInfo[] props = t.GetProperties();
+            PropertyInfo[] props = CacheManager.Instance.GetCachedProperties(t);
             T res = new T();
             foreach (var prop in props)
             {

@@ -1,16 +1,19 @@
+using System;
 using System.Linq;
-
-public static class ModelHelper
+namespace SM.Business
 {
-	public static string GetRepresentTable<T>()
-	{
-		string res = string.Empty;
-		var atts = typeof(T).GetType().GetCustomAttributes(typeof(MapTableAttribute), false);
-		if (atts != null && atts.Any())
-		{
-			var tblAttr = atts.First() as MapTableAttribute;
-			res = tblAttr.Name;
-		}
-		return res;
-	}
+    public static class ModelHelper
+    {
+        public static string GetRepresentTable(this Type type)
+        {
+            string res = string.Empty;
+            var atts = type.GetCustomAttributes(typeof(MapTableAttribute), false);
+            if (atts != null && atts.Any())
+            {
+                var tblAttr = atts.First() as MapTableAttribute;
+                res = tblAttr.Name;
+            }
+            return res;
+        }
+    }
 }
