@@ -17,8 +17,7 @@ namespace SM.WcfService.Implementations
         private const string InsertStoreTemplate = "Insert{0}";
         private const string UpdateStoreTemplate = "Update{0}";
         private const string DeleteStoreTemplate = "Delete{0}";
-
-        private DbManager()
+        static DbManager()
         {
             var connStr = ConfigurationManager.ConnectionStrings["DB_CONNSTRING"].ConnectionString;
             Database = new SMDatabase(connStr);
@@ -41,13 +40,8 @@ namespace SM.WcfService.Implementations
         {
             Type objType = typeof(T);
             PropertyInfo[] props = CacheManager.Instance.GetCachedProperties(objType);
-            if (props == null)
-            {
-                props = objType.GetProperties();
-                CacheManager.Instance.SetCacheProperties(objType);
-            }
             List<object> values = new List<object>();
-            foreach(PropertyInfo p in props)
+            foreach (PropertyInfo p in props)
             {
                 if (!p.IsDefined(typeof(IdentityAttribute)))
                 {

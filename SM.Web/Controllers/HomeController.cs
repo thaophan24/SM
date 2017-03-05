@@ -1,5 +1,6 @@
 ﻿using SM.Business.Validation.Attributes;
 using SM.Model;
+using SM.Web.AppCodes.Authorization;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,18 @@ namespace SM.Web.Controllers
 {
     public class HomeController : Controller
     {
+        [CustomAuthorize(Roles = "Fuck")]
+        [HttpGet]
         public ActionResult Index()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Index(Person person)
+        {
+            return View();
+        }
+        public ActionResult Test()
         {
             return View();
         }

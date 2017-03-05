@@ -31,11 +31,6 @@ namespace SM.Cache
             var typeName = objectType.FullName + CACHE_DB_SUFFIX;
             SetCacheValue(typeName, tableName);
         }
-        public void SetCacheProperties(Type objectType)
-        {
-            var typeName = objectType.FullName + CACHE_PROP_SUFFIX;
-            SetCacheValue(typeName, objectType.GetProperties());
-        }
         public string GetCachedDbTable(Type objectType)
         {
             return GetCachedValue<string>(objectType.FullName + CACHE_DB_SUFFIX);
@@ -45,7 +40,9 @@ namespace SM.Cache
             var props = GetCachedValue<PropertyInfo[]>(objectType.FullName + CACHE_PROP_SUFFIX);
             if (props == null)
             {
-                SetCacheProperties(objectType);
+                var key = objectType.FullName + CACHE_PROP_SUFFIX;
+                props = objectType.GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
+                SetCacheValue(key, props);
             }
             return props;
         }

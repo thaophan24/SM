@@ -1,3 +1,5 @@
+using System;
+
 namespace SM.Web.Tools
 {
     public class ColumnType
@@ -7,6 +9,6 @@ namespace SM.Web.Tools
         [MapColumn(Name = "DATA_TYPE")]
         public string Type { get; set; }
         [MapColumn(Name = "CHARACTER_MAXIMUM_LENGTH")]
-        public string Length { get; set; }
+        public Nullable<int> Length { get; set; }
     }
 }

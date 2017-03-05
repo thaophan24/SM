@@ -1,3 +1,4 @@
+using SM.Cache;
 using System;
 using System.Linq;
 using System.Reflection;
@@ -50,6 +51,20 @@ namespace SM.Model
             if (prop != null)
             {
                 res = prop.GetCustomAttribute<T>();
+            }
+            return res;
+        }
+        public static PropertyInfo GetFirstPropertyAppliedAttribute<T>(this object obj) where T: Attribute
+        {
+            var props = CacheManager.Instance.GetCachedProperties(obj.GetType());
+            PropertyInfo res = null;
+            foreach (PropertyInfo prop in props)
+            {
+                if (prop.GetCustomAttribute<T>() != null)
+                {
+                    res = prop;
+                    break;
+                }
             }
             return res;
         }

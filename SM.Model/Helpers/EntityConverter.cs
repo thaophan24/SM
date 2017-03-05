@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Reflection;
 
-namespace SM.Model.Helpers
+namespace SM.Model
 {
     public static class EntityConverter
     {
@@ -21,7 +21,7 @@ namespace SM.Model.Helpers
                 {
                     colName = columnAtt.Name;
                 }
-                if (!row.IsNull(colName))
+                if (row.Table.Columns.Contains(colName) &&  !row.IsNull(colName))
                 {
                     t.InvokeMember(prop.Name, BindingFlags.SetProperty, null, res, new object[] { row[colName] });
                 }

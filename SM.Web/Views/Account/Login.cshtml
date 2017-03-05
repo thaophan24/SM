@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@model SM.Web.Models.LoginViewModel
+<br />
+<br />
+<br />
+<div class="row">
+    <div class="col-lg-12">
+        @using (Html.BeginForm("Login", "Account", new { @id = "SMForm", @ReturnUrl = Request.QueryString["ReturnUrl"] }, FormMethod.Post))
+        {
+            <div class="row">
+                @Html.DisplayFor(x => x.UserName)
+            </div>
+            @Html.TextBoxFor(x => x.UserName)
+            <div class="row">
+                @Html.DisplayFor(x => x.Password)
+            </div>
+            @Html.TextBoxFor(x => x.Password)
+            <input type="submit" value="Submit" />
+        }
+        <div>@Html.ValidationMessageFor(x => x.UserName)</div>
+        <div>@Html.ValidationMessageFor(x => x.Password)</div>
+        <div>@Html.DisplayFor(x => x.ErrorMessage)</div>
+    </div>
+</div>

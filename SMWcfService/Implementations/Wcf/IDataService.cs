@@ -15,5 +15,7 @@ namespace SM.WcfService.Implementations
     {
         [OperationContract]
         DataTable GetTableColumnsType(string tableName);
+        [OperationContract]
+        DataTable GetUser(string userName, string password);
     }
 }

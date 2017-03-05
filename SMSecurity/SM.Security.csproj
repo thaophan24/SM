@@ -51,13 +51,11 @@
     <Compile Include="Wcf\ClientBehavior.cs" />
     <Compile Include="Wcf\ClientMessageInspector.cs" />
     <Compile Include="Wcf\Constants.cs" />
-    <Compile Include="Wcf\SecHelpers.cs" />
+    <Compile Include="Helpers\SecHelpers.cs" />
     <Compile Include="Wcf\SecuredServiceAttribute.cs" />
     <Compile Include="Wcf\ServerMessageInspector.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Key\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
